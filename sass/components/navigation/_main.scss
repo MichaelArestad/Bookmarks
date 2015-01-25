@@ -4,9 +4,10 @@
 
 
 .main-navigation {
-	clear: both;
+	// clear: both;
 	display: block;
-	float: left;
+	// float: left;
+	font-size: em( 14px );
 	width: 100%;
 
 	ul {
@@ -14,55 +15,36 @@
 		margin: 0;
 		padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a {
-			}
-
-			a:hover {
-			}
+		ul a {
+			padding-left: 20px;
 		}
-
-		li:hover > ul {
-			left: auto;
+		ul ul a {
+			padding-left: 40px;
+		}
+		ul ul ul a {
+			padding-left: 60px;
 		}
 	}
 	li {
-		float: left;
 		position: relative;
-
-		&:hover > a {
-		}
 	}
 	a {
 		display: block;
-		text-decoration: none;
+		padding: 12px;
+		font-weight: 300;
+		color: $grey;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
+	}
+}
+
+.menu-item-object-category {
+	a:before {
+			content: "#";
+			margin-right: em( 1px, 14px );
 	}
 }
 

@@ -25,6 +25,8 @@ body {
 	background: #fff; // Fallback for when there is no custom background color defined.
 }
 
+@import "links";
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: "";

@@ -2,22 +2,40 @@
 // Links
 // ==========================================================================
 
-$link-color:(
-	color: $blue--dark,
-	color--hover: $blue--light,
-	color--visited: $blue--dark,
+$links:(
+	color: $blue,
+	color--hover: lighten( $blue, 10% ),
+	color--visited: $blue,
+	shadow-color--focus: $blue,
+	shadow-size--focus: 3px
 );
 
 a {
-	color: map-get( $link-color, color );
+	color: map-get( $links, color );
+	text-decoration: none;
+	outline: 0;
 }
 
 a:visited {
-	color: map-get( $link-color, color--visited );
+	color: map-get( $links, color--visited );
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: map-get( $link-color, color--hover );
+	color: map-get( $links, color--hover );
+}
+
+a:focus {
+	box-shadow: 0 0 0 map-get( $links, shadow-size--focus ) map-get( $links, shadow-color--focus );
+	animation: focus .2s ease-in-out;
+}
+
+@keyframes focus {
+	0% {
+		box-shadow: 0 0 0 15px transparentize( map-get( $links, shadow-color--focus ), 1 );
+	}
+	100% {
+		box-shadow: 0 0 0 map-get( $links, shadow-size--focus ) map-get( $links, shadow-color--focus );
+	}
 }
