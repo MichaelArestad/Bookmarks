@@ -13,9 +13,11 @@
 	padding: em( 15px );
 	border-bottom: 1px solid $grey;
 	font-weight: 300;
+	background: #fff;
 
 	@include breakpoint( M ) {
 		padding: em( 30px );
+		background: none;
 	}
 	@media only screen and ( -webkit-min-device-pixel-ratio: 1.5 ),
 	only screen and ( min-resolution: 144dpi ) {
