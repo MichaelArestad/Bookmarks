@@ -4,15 +4,43 @@
 
 @import
 	"variables",
-	"mixins",
-	"extends";
+	"mixins";
 
 
 $button-types: secondary, primary;
 
+button,
+.button {
+	display: inline-block;
+	margin: 0;
+	padding: 0 10px 1px;
+	border: 0;
+	border-radius: 3px;
+	font-size: 14px;
+	line-height: 2;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	-webkit-appearance: none;
+
+	&:focus {
+		box-shadow: 0 0 0 map-get( $buttons, shadow-size--focus ) map-get( $buttons, shadow-color--focus );
+		animation: button-focus .2s ease-in-out;
+	}
+}
+
+@keyframes button-focus {
+	0% {
+		box-shadow: 0 0 0 15px transparentize( map-get( $buttons, shadow-color--focus ), 1 );
+	}
+	100% {
+		box-shadow: 0 0 0 map-get( $buttons, shadow-size--focus ) map-get( $buttons, shadow-color--focus );
+	}
+}
+
+
 @each $item in $button-types {
-	.button--#{$item} {
-		@extend %button;
+	.button.is-#{$item} {
 		@include button( map-get( $buttons, #{$item}__background ), map-get( $buttons, #{$item}__color ) );
 	}
 }

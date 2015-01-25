@@ -11,39 +11,47 @@ $sidebar-width: 300px;
 body {
 	background: $grey-light;
 
-	&:before {
-		content: "";
-		display: block;
-		position: fixed;
-			top: 0;
-			left: 0;
-		width: $sidebar-width;
-		height: 100%;
-		min-height: 100%;
-		background: $blue-dark;
-		z-index: 0;
+	@include breakpoint( M ) {
+		&:before {
+			content: "";
+			display: block;
+			position: fixed;
+				top: 0;
+				left: 0;
+			width: $sidebar-width;
+			height: 100%;
+			min-height: 100%;
+			background: $blue-dark;
+			z-index: 0;
+		}
 	}
 }
 
 .site-header {
-	float: left;
 	position: relative;
-	width: $sidebar-width;
-	padding: em( 20px );
+	padding: em( 15px );
 	color: $grey;
-}
+	background: $blue-dark;
 
-.site-branding {
-	// border-bottom: 1px solid $grey-dark;
+	@include breakpoint( M ) {
+		float: left;
+		padding: em( 20px );
+		width: $sidebar-width;
+	}
 }
 
 .site-title {
-	font-size: em( 30px );
 	margin: 0;
+	font-size: em( 30px );
+	font-weight: 200;
 
+	@include breakpoint( M- ) {
+		font-size: em( 16px );
+		text-transform: uppercase;
+		font-weight: 600;
+	}
 	 a {
 		color: #fff;
-		font-weight: 200;
 	}
 }
 
@@ -53,11 +61,17 @@ body {
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: em( 1px, 12px );
+
+	@include breakpoint( M- ) {
+		display: none;
+	}
 }
 
 .site-content {
-	margin-left: $sidebar-width;
-	overflow: hidden; // lazy clearfix
+	@include breakpoint( M ) {
+		margin-left: $sidebar-width;
+		overflow: hidden; // lazy clearfix
+	}
 }
 
 
@@ -67,7 +81,11 @@ body {
 
 .site-header {
 	.search-form {
-		margin: 40px 0;
+		margin: 15px 0;
+
+		@include breakpoint( M ) {
+			margin: 40px 0;
+		}
 	}
 	.search-field {
 		background: none;
@@ -99,8 +117,11 @@ body {
 		clip: rect( 1px, 1px, 1px, 1px );
 		position: absolute !important;
 		top: 0;
-		left: 100%;
+		left: 0;
 
+		@include breakpoint( M ) {
+			left: 100%;
+		}
 		&:hover,
 		&:active,
 		&:focus {
@@ -120,6 +141,48 @@ body {
 			top: 5px;
 			width: auto;
 			z-index: 100000; // Above WP toolbar
+		}
+	}
+}
+
+
+// paging nav
+.posts-navigation {
+	padding: em( 30px );
+
+	.nav-links a {
+		display: inline-block;
+		padding: 9px 15px;
+		background: $orange;
+		color: $grey-light;
+		color: rgba( 255, 255, 255, .86 );
+		font-size: 14px;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #fff;
+			background: $orange-light;
+		}
+	}
+}
+
+
+
+// Site footer
+.site-footer {
+	padding: em( 30px, 14px );
+	color: darken( $grey, 10% );
+	font-size: em( 14px );
+	font-weight: 300;
+
+	a {
+		color: darken( $grey, 30% );
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $blue;
 		}
 	}
 }

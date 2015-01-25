@@ -30,7 +30,7 @@
 		<?php get_search_form(); ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bookmarks' ); ?></button>
+			<button class="menu-toggle button" aria-controls="menu" aria-expanded="false"><?php _e( 'Menu', 'bookmarks' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

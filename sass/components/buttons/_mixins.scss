@@ -10,7 +10,7 @@
 
 	&:hover,
 	&:focus {
-		background: darken( $button-color, 5% );
+		background: darken( $button-color, 15% );
 		border-color: darken( $button-color, 15% );
 		color: $text-color;
 		outline: 0;

@@ -6,6 +6,9 @@ $buttons:(
 	primary__background: $blue,
 	primary__color: #fff,
 
-	secondary__background: #f7f7f7,
-	secondary__color: #555
+	secondary__background: $grey-light,
+	secondary__color: $blue-dark,
+
+	shadow-color--focus: $blue,
+	shadow-size--focus: 3px
 );

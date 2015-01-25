@@ -51,15 +51,22 @@
 /* Small menu. */
 .menu-toggle {
 	display: none;
+	width: 100%;
+	border-radius: 0;
+	background: transparent;
+	color: $grey;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@include breakpoint( M- ) {
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
 
-	.main-navigation ul {
+	.main-navigation .nav-menu {
 		display: none;
 	}
 }

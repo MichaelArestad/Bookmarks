@@ -10,10 +10,13 @@
 // Link posts
 .hentry {
 	position: relative;
-	padding: em( 30px );
+	padding: em( 15px );
 	border-bottom: 1px solid $grey;
 	font-weight: 300;
 
+	@include breakpoint( M ) {
+		padding: em( 30px );
+	}
 	@media only screen and ( -webkit-min-device-pixel-ratio: 1.5 ),
 	only screen and ( min-resolution: 144dpi ) {
 		font-weight: 400;
@@ -81,9 +84,8 @@
 	margin: 0 0 1.5em;
 }
 
-.search-header {
+.page-header {
 	padding: em( 30px );
-	// border-bottom: 1px solid $grey;
 	background: $grey-dark;
 }
 .page-title {
