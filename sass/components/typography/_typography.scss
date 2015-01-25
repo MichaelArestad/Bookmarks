@@ -46,15 +46,9 @@ i {
 }
 
 blockquote {
-	color: $gray--middle;
 	margin: 1em 1.5em;
 	font-size: em( 25px );
 	font-style: italic;
-
-	@include breakpoint( S- ) {
-		margin: 1em 0;
-		font-size: em( 18px, 14px );
-	}
 }
 
 address {
