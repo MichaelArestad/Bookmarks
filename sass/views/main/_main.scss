@@ -5,3 +5,39 @@
 
 @import
 	"sidebar";
+
+$sidebar-width: 200px;
+
+body {
+	background: $grey-light;
+
+	&:before {
+		content: "";
+		display: block;
+		position: fixed;
+			top: 0;
+			left: 0;
+		width: $sidebar-width;
+		height: 100%;
+		min-height: 100%;
+		background: $blue-dark;
+		z-index: 0;
+	}
+}
+
+.site-header {
+	float: left;
+	position: relative;
+	width: $sidebar-width;
+	color: #fff;
+}
+
+.site-content {
+	margin-left: $sidebar-width;
+	overflow: hidden; // lazy clearfix
+}
+
+.content-area {
+	max-width: 650px;
+	margin: 0 auto;
+}

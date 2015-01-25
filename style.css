@@ -945,12 +945,37 @@ object {
   display: block;
 }
 
-.content-area {
-  float: right;
+body {
+  background: #eff0f4;
+}
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  min-height: 100%;
+  background: #2c3342;
+  z-index: 0;
 }
 
-.site-content .widget-area {
+.site-header {
   float: left;
+  position: relative;
+  width: 200px;
+  color: #fff;
+}
+
+.site-content {
+  margin-left: 200px;
+  overflow: hidden;
+}
+
+.content-area {
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

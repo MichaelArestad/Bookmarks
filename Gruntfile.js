@@ -17,7 +17,7 @@ grunt.initConfig({
 
   autoprefixer: {
     options: {
-      // Task-specific options go here.
+      map: true
     },
     global: {
       options: {
