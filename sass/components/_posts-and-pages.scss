@@ -7,9 +7,64 @@
 	display: block;
 }
 
+// Link posts
 .hentry {
-	margin: 0 0 1.5em;
+	position: relative;
+	padding: em( 30px );
+	border-bottom: 1px solid $grey;
+	font-weight: 300;
+
+	@media only screen and ( -webkit-min-device-pixel-ratio: 1.5 ),
+	only screen and ( min-resolution: 144dpi ) {
+		font-weight: 400;
+	}
+	&:hover {
+		background: #fff;
+	}
+	.entry-content {
+		p,// TODO have someone write some PHP to limit content
+		a {
+			margin: 0;
+			white-space: pre;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
 }
+
+.entry-footer {
+	margin-top: em( 7px );
+	font-size: em( 14px );
+
+	.cat-links,
+	.tags-links {
+		a {
+			display: inline-block;
+			margin-right: 6px;
+			color: darken( $grey, 10% );
+			text-transform: lowercase;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $orange;
+			}
+			&:before {
+				content: "#";
+				margin-right: em( 1px, 14px );
+			}
+		}
+	}
+}
+
+.post-edit-link {
+	position: absolute;
+		top: 50%;
+		right: 30px;
+	transform: translateY( -50% );
+}
+
+
 
 .byline,
 .updated:not(.published){
@@ -21,13 +76,24 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.search-header {
+	padding: em( 30px );
+	// border-bottom: 1px solid $grey;
+	background: $grey-dark;
+}
+.page-title {
+	margin: 0;
+	color: $grey-light;
+	font-size: em( 30px );
+	font-weight: 300;
+
+	span {
+		color: #fff;
+		font-weight: 400;
+	}
 }

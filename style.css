@@ -929,7 +929,57 @@ object {
 }
 
 .hentry {
-  margin: 0 0 1.5em;
+  position: relative;
+  padding: 1.5em;
+  border-bottom: 1px solid #c8ceda;
+  font-weight: 300;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .hentry {
+    font-weight: 400;
+  }
+}
+.hentry:hover {
+  background: #fff;
+}
+.hentry .entry-content p,
+.hentry .entry-content a {
+  margin: 0;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.entry-footer {
+  margin-top: 0.35em;
+  font-size: 0.7em;
+}
+.entry-footer .cat-links a,
+.entry-footer .tags-links a {
+  display: inline-block;
+  margin-right: 6px;
+  color: #aab3c5;
+  text-transform: lowercase;
+}
+.entry-footer .cat-links a:hover, .entry-footer .cat-links a:focus, .entry-footer .cat-links a:active,
+.entry-footer .tags-links a:hover,
+.entry-footer .tags-links a:focus,
+.entry-footer .tags-links a:active {
+  color: #e85f3d;
+}
+.entry-footer .cat-links a:before,
+.entry-footer .tags-links a:before {
+  content: "#";
+  margin-right: 0.07143em;
+}
+
+.post-edit-link {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .byline,
@@ -942,15 +992,25 @@ object {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.search-header {
+  padding: 1.5em;
+  background: #50545f;
+}
+
+.page-title {
+  margin: 0;
+  color: #eff0f4;
+  font-size: 1.5em;
+  font-weight: 300;
+}
+.page-title span {
+  color: #fff;
+  font-weight: 400;
 }
 
 .widget {
