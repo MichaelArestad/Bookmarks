@@ -1,0 +1,27 @@
+// ==========================================================================
+// Typography variables
+// ==========================================================================
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900);
+
+$normal: 400; // Change these values when using custom fonts
+$bold: 600; // For example, bold could change to 400;
+
+$root-font:(
+	color: #404040,
+	font-size: 20px,
+	line-height: 1.6
+);
+
+
+// ==========================================================================
+// Typefaces
+// ==========================================================================
+
+$monospace: 'courier new', monospace;
+$serif: Georgia, "Times New Roman", Times, serif;
+$sans: Helvetica, Arial, sans-serif;
+$open-sans: 'Source Sans Pro', $sans;
+
+// Icons
+// $dashicons: 'Dashicons';

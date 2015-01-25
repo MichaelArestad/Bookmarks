@@ -1,0 +1,51 @@
+// ==========================================================================
+// Base element styles
+// ==========================================================================
+
+
+// Sets box-sizing default to border-box on all elements
+*,
+*:before,
+*:after {
+	// Paul Irish box sizing!!!
+	// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+	box-sizing: border-box;
+
+	@media only screen and ( -webkit-min-device-pixel-ratio: 1.5 ),
+	only screen and ( min-resolution: 144dpi ) {
+		// Style adjustments for high resolution devices
+
+		// Only looks good on HiDPI and on icons
+		-webkit-font-smoothing: antialiased;
+
+	}
+}
+
+body {
+	background: #fff; // Fallback for when there is no custom background color defined.
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: $gray--light;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+}
+
+@import "tables";
