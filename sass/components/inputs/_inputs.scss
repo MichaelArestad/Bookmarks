@@ -41,6 +41,7 @@ input::-moz-focus-inner { // Corrects inner padding and border displayed oddly i
 textarea {
 	padding: em( 8px ) em( 15px );
 	color: map-get( $inputs, color );
+	border-radius: 0;
 	border: 1px solid map-get( $inputs, border-color );
 
 	&:focus {
